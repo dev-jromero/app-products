@@ -27,4 +27,22 @@ export class WebService {
   deleteProducto(id): Observable<any>{
     return this.http.delete(this.API_Server + 'productos/' + id);
   }
+  
+  //Empleado
+  getlistEmpleados(): Observable<any>{
+    return this.http.get(this.API_Server + 'empleados/');
+  }
+
+  getByIdEmpleado(id): Observable<any>{
+    return this.http.get(this.API_Server + 'empleados/' + id);
+  }
+  postEmpleado(empleado): Observable<any>{
+    return this.http.post(this.API_Server + 'empleados/', empleado);
+  }
+  putEmpleado(id, empleado): Observable<any>{
+    return this.http.put(this.API_Server + 'empleados/' + id, empleado);
+  }
+  deleteEmpleado(id): Observable<any>{
+    return this.http.delete(this.API_Server + 'empleados/' + id);
+  }
 }
