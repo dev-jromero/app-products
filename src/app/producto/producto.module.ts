@@ -5,7 +5,12 @@ import { CreateProductoComponent } from './create-producto/create-producto.compo
 import { DeleteProductoComponent } from './delete-producto/delete-producto.component';
 import { ListProductoComponent } from './list-producto/list-producto.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
+
+// const rutasApp:Routes = [
+//   {path: 'lista-producto', component:ListProductoComponent}
+// ]
 
 @NgModule({
   declarations: [
@@ -15,9 +20,11 @@ import {ReactiveFormsModule} from '@angular/forms'
     ListProductoComponent
   ],
   imports: [
+    // RouterModule.forRoot(rutasApp),
     CommonModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   exports:[
     ProductoComponent, 
